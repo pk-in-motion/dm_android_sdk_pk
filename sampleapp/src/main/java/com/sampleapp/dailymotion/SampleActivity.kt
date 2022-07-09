@@ -66,6 +66,36 @@ class SampleActivity : AppCompatActivity(), View.OnClickListener {
                 "playlist" to playlistIdEditText.text.toString(),
                 /* Set it to true because the default value is false */
                 "queue-enable" to "true"))
+
+    // ADDITIONAL CODES from ANDROID Team to DISABLE the Q
+        // *** email re: disable-queue on native app (with our SDK) - Ref: #2173548
+        //##########################################################################
+        /* Player custom initialization */
+        playerWebView.initialize(baseUrl = "https://www.dailymotion.com/embed/",
+            queryParameters = mapOf(
+                /* Hard coded parameter taken from load(...) function call */
+                "sharing-enable" to "false",
+                "watchlater-enable" to "false",
+                "like-enable" to "false",
+                "collections-enable" to "false",
+                "fullscreen-action" to "trigger_event",
+                "locale" to Locale.getDefault().language,
+                "ui-start-screen-info" to "false",
+                "queue-enable" to "true",
+                /* New parameter to customize the player */
+                "disable-queue" to "false",
+                "queue-autoplay-next" to "false"
+            ))
+
+        /* Play the video */
+        playerWebView.queueCommand(PlayerWebView.COMMAND_LOAD,  mapOf(
+            "video" to videoIdEditText.text.toString(),
+            "start" to 20
+        ))
+        // END -- ADDITIONAL CODES from ANDROID Team to DISABLE the Q
+
+
+
     }
 
     override fun onClick(v: View) {
