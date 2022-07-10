@@ -34,8 +34,8 @@ class SampleActivity : AppCompatActivity(), View.OnClickListener {
     companion object {
 
         const val DEFAULT_VERTICAL_VIDEO_ID = "x7h2j4q"
-        const val DEFAULT_HORIZONTAL_VIDEO_ID = "x70val9"
-        const val DEFAULT_PLAYLIST_ID = "x5zhzj"
+        const val DEFAULT_HORIZONTAL_VIDEO_ID = "x873541"
+        const val DEFAULT_PLAYLIST_ID = "x7848h"
         const val DEFAULT_SCALE_MODE = "fit"
         const val DEFAULT_QUALITY = "240"
         const val DEFAULT_VOLUME_VALUE = "1"
