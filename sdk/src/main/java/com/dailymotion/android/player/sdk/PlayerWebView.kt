@@ -200,11 +200,17 @@ class PlayerWebView @JvmOverloads constructor(
             }
 
             override fun onShowCustomView(view: View, callback: CustomViewCallback) {}
+
+            /* removing transparent cover/re-appearing play icon on webview */
+            /*
             override fun getDefaultVideoPoster(): Bitmap {
                 val colors = IntArray(1)
                 colors[0] = Color.TRANSPARENT
                 return Bitmap.createBitmap(colors, 0, 1, 1, 1, Bitmap.Config.ARGB_8888)
             }
+
+             */
+            // END - removing transparent cover/re-appearing play icon on webview
 
             override fun onHideCustomView() {}
         }
